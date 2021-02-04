@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "run-p start:**",
+    "start:app": "UMI_ENV=local umi dev",
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "build": "run-p build:**",
+    "build:app": "umi build",
+    "build:lambda": "netlify-lambda build src/lambda",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@emotion/core": "^10.1.0",
+    "formik": "^2.2.6",
+    "react-netlify-identity": "^0.2.5",
+    "sancho": "^3.5.6",
+    "umi": "^3.3.7",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.1.2",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@umijs/preset-react": "^1.7.13",
+    "@umijs/preset-ui": "^2.2.9",
+    "@umijs/test": "^3.3.7",
+    "lint-staged": "^10.0.7",
+    "netlify-lambda": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}
