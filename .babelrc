@@ -10,15 +10,10 @@
         }
       ],
       ["@babel/preset-react", { "runtime": "automatic", "importSource": "@emotion/core" }],
-      // [
-      //   "@emotion/babel-preset-css-prop",
-      //   { "autoLabel": "never" }
-      // ]
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties",
       "@babel/plugin-transform-object-assign",
-      "@babel/plugin-proposal-object-rest-spread",
-      "babel-plugin-emotion"
+      "@babel/plugin-proposal-object-rest-spread"
     ]
   }
