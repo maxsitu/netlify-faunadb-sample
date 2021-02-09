@@ -80,7 +80,6 @@ function LoginScreen(props: AuthProps) {
       </AppBar>
       <TabPanel value={tabIndex} index={0}>
         <Login onLogin={props.onLogin} />
-        <Providers />
       </TabPanel>
       <TabPanel value={tabIndex} index={1}>
         <Signup onSignup={props.onSignup} />

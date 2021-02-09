@@ -5,9 +5,9 @@
     "start:app": "umi dev",
     "start:lambda": "netlify-lambda serve src/lambda",
     "build": "run-p build:**",
-    "build:app": "umi build",
+    "build:app": "npx umi build",
     "build:lambda": "netlify-lambda build src/lambda",
-    "postinstall": "umi generate tmp",
+    "postinstall": "npx umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
